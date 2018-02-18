@@ -10,7 +10,6 @@ import re
 import numpy as np
 import matplotlib.pyplot as plt
 import os
-get_ipython().magic('matplotlib inline')
 import time
 import datetime
 import logging
@@ -399,8 +398,8 @@ def main():
     base_file.to_csv('base_file.csv')
     
     
-    arg_AWSuser = sys.argv[2]
-    arg_AWSpass = sys.argv[3]
+    arg_AWSuser = 'AKIAIXCJ73ZTTNXA2PHQ'
+    arg_AWSpass = 'S+8pJKastPlmI16WU2JFxZXCoxSdKv/rpXHWaGKr'
     uploadToS3("Compiled_Table", 'base_file.csv', arg_AWSuser, arg_AWSpass)
     uploadToS3("Summary_Table", 'summary_metrics.csv', arg_AWSuser, arg_AWSpass)
     uploadToS3("Activity_Log", logfilename, arg_AWSuser, arg_AWSpass)

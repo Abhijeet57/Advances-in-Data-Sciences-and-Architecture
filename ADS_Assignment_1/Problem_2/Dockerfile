@@ -7,3 +7,8 @@ ADD requirements.txt /home
 
 # Install required Libraries
 RUN pip install -r ./home/requirements.txt
+RUN pip install lxml
+RUN pip install numpy
+RUN pip install pandas
+RUN pip install requests
+RUN pip install seaborn
