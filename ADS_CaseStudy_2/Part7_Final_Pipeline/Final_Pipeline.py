@@ -15,7 +15,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import make_pipeline
 
-'''
+
 # In[21]:
 
 print('LOG File name : pipeLine_logging.txt')
@@ -32,7 +32,7 @@ print('Program Started')
 logging.debug('Loading Data into Dataframe')
 print('Loading Data into Dataframe')
 try :  
-    df_loaded = pd.read_csv("../Data_for_EnergyCaseStudy/energydata_complete.csv")
+    df_loaded = pd.read_csv("../home/energydata_complete.csv")
     df = df_loaded
     logging.debug('Data Size'+str(df.shape))
     print('Data Size'+str(df.shape))
@@ -151,7 +151,7 @@ df = df.drop(['date'],axis=1)
 
 # In[ ]:
 
-'''
+
 logging.debug('Loading libraries for feature selection and prediction')
 print('Loading libraries for feature selection and prediction')
 from sklearn.pipeline import Pipeline
@@ -163,7 +163,7 @@ from sklearn.metrics import mean_squared_error
 from sklearn.metrics import r2_score
 from sklearn.metrics import mean_absolute_error
 
-'''
+
 X = df.drop(['Appliances'],axis=1)
 y = df['Appliances']
 
@@ -208,6 +208,6 @@ print('mae_train_rf: ', float("{0:.2f}".format(mae_train_rf)))
 print('mae_test_rf: ', float("{0:.2f}".format(mae_test_rf)))
 print('mape_train_rf: ', float("{0:.2f}".format(mape_train_rf)))
 print('mape_test_rf: ', float("{0:.2f}".format(mape_test_rf)))
-'''
+
 logging.debug("Process Completed")
 print("Process Completed")
