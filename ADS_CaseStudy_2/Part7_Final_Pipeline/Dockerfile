@@ -3,6 +3,7 @@ FROM python:3.6.3
 
 # Add the script or text to the Dockerfile
 ADD Final_Pipeline.py /home
+ADD energydata_complete.csv /home
 # ADD requirements.txt /home
 
 # Install required Libraries
@@ -10,3 +11,7 @@ ADD Final_Pipeline.py /home
 RUN pip install numpy
 RUN pip install pandas
 RUN pip install seaborn
+RUN pip install sklearn
+RUN pip install scipy
+
+CMD ["python3", "/home/Final_Pipeline.py"] 
